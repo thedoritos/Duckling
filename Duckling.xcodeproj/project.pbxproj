@@ -13,6 +13,8 @@
 		9D1837661ADD4884005268EF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D1837651ADD4884005268EF /* Images.xcassets */; };
 		9D1837691ADD4884005268EF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D1837671ADD4884005268EF /* LaunchScreen.xib */; };
 		9D1837751ADD4884005268EF /* DucklingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1837741ADD4884005268EF /* DucklingTests.swift */; };
+		9DADAEC21AE7E1DB0085A217 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DADAEC01AE7E1DB0085A217 /* Argo.framework */; };
+		9DADAEC31AE7E1DB0085A217 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DADAEC11AE7E1DB0085A217 /* Runes.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		9D18376E1ADD4884005268EF /* DucklingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DucklingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1837731ADD4884005268EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D1837741ADD4884005268EF /* DucklingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DucklingTests.swift; sourceTree = "<group>"; };
+		9DADAEC01AE7E1DB0085A217 /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
+		9DADAEC11AE7E1DB0085A217 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DADAEC21AE7E1DB0085A217 /* Argo.framework in Frameworks */,
+				9DADAEC31AE7E1DB0085A217 /* Runes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +65,8 @@
 		9D1837501ADD4884005268EF = {
 			isa = PBXGroup;
 			children = (
+				9DADAEC01AE7E1DB0085A217 /* Argo.framework */,
+				9DADAEC11AE7E1DB0085A217 /* Runes.framework */,
 				9D18375B1ADD4884005268EF /* Duckling */,
 				9D1837711ADD4884005268EF /* DucklingTests */,
 				9D18375A1ADD4884005268EF /* Products */,
@@ -122,6 +130,7 @@
 				9D1837551ADD4884005268EF /* Sources */,
 				9D1837561ADD4884005268EF /* Frameworks */,
 				9D1837571ADD4884005268EF /* Resources */,
+				9DADAEC41AE7E2170085A217 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -206,6 +215,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9DADAEC41AE7E2170085A217 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Argo.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9D1837551ADD4884005268EF /* Sources */ = {
@@ -340,6 +367,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Duckling/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -350,6 +381,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Duckling/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -409,6 +444,7 @@
 				9D18377A1ADD4884005268EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9D18377B1ADD4884005268EF /* Build configuration list for PBXNativeTarget "DucklingTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +453,7 @@
 				9D18377D1ADD4884005268EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
