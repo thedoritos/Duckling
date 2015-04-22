@@ -15,6 +15,8 @@
 		9D1837751ADD4884005268EF /* DucklingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1837741ADD4884005268EF /* DucklingTests.swift */; };
 		9DADAEC21AE7E1DB0085A217 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DADAEC01AE7E1DB0085A217 /* Argo.framework */; };
 		9DADAEC31AE7E1DB0085A217 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DADAEC11AE7E1DB0085A217 /* Runes.framework */; };
+		9DADAECB1AE7E7640085A217 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DADAECA1AE7E7640085A217 /* Identifiers.swift */; };
+		9DADAECE1AE7EFDA0085A217 /* identifiers.json in Resources */ = {isa = PBXBuildFile; fileRef = 9DADAECD1AE7EFDA0085A217 /* identifiers.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		9D1837741ADD4884005268EF /* DucklingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DucklingTests.swift; sourceTree = "<group>"; };
 		9DADAEC01AE7E1DB0085A217 /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
 		9DADAEC11AE7E1DB0085A217 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
+		9DADAECA1AE7E7640085A217 /* Identifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Identifiers.swift; path = Classes/Models/Identifiers.swift; sourceTree = "<group>"; };
+		9DADAECD1AE7EFDA0085A217 /* identifiers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = identifiers.json; path = Config/identifiers.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 		9D18375B1ADD4884005268EF /* Duckling */ = {
 			isa = PBXGroup;
 			children = (
+				9DADAECC1AE7EF880085A217 /* Config */,
+				9DADAEC81AE7E7350085A217 /* Classes */,
 				9D18375E1ADD4884005268EF /* AppDelegate.swift */,
 				9D1837601ADD4884005268EF /* ViewController.swift */,
 				9D1837621ADD4884005268EF /* Main.storyboard */,
@@ -118,6 +124,30 @@
 				9D1837731ADD4884005268EF /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9DADAEC81AE7E7350085A217 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9DADAEC91AE7E7380085A217 /* Models */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		9DADAEC91AE7E7380085A217 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9DADAECA1AE7E7640085A217 /* Identifiers.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		9DADAECC1AE7EF880085A217 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				9DADAECD1AE7EFDA0085A217 /* identifiers.json */,
+			);
+			name = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +233,7 @@
 			files = (
 				9D1837641ADD4884005268EF /* Main.storyboard in Resources */,
 				9D1837691ADD4884005268EF /* LaunchScreen.xib in Resources */,
+				9DADAECE1AE7EFDA0085A217 /* identifiers.json in Resources */,
 				9D1837661ADD4884005268EF /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D1837611ADD4884005268EF /* ViewController.swift in Sources */,
+				9DADAECB1AE7E7640085A217 /* Identifiers.swift in Sources */,
 				9D18375F1ADD4884005268EF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
